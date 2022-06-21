@@ -201,7 +201,7 @@ footer ul {
   width: 75%;
   height: 400px;
   margin: 0 auto;
-  background-image: url(img/yaniymari.jpeg);
+  background-image: url(../img/yaniymari.jpeg);
   color: white;
   text-align: center;
 }
@@ -284,14 +284,14 @@ h5.card-title a:hover {
 
 .mensuales {
   width: 50%;
-  background-image: url(img/lasalablanca.png);
+  background-image: url(../img/lasalablanca.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .talleres {
   width: 50%;
-  background-image: url(img/letournispadel.png);
+  background-image: url(../img/letournispadel.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -549,11 +549,11 @@ section.libros, section.productos {
     text-align: center;
   }
   section.mensuales {
-    background-image: url(./img/rectanguloarticleMobile.png);
+    background-image: url(../img/rectanguloarticleMobile.png);
     background-size: cover;
   }
   section.talleres {
-    background-image: url(./img/rectanglearticle2Mobile.png);
+    background-image: url(../img/rectanglearticle2Mobile.png);
     background-size: cover;
   }
   div.imagenMobile {
