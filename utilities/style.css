@@ -658,7 +658,8 @@ ul.social-footer2 li a {
         grid-template-columns: auto;
     -ms-grid-rows: 1fr 4fr;
         grid-template-rows: 1fr 4fr;
-        grid-template-areas: "header" "main";
+        grid-template-areas: "header"
+ "main";
   }
   header {
     font-size: 20px;
@@ -687,7 +688,7 @@ ul.social-footer2 li a {
   }
   ul.redesLista {
     display: none;
-  }
+  } 
   button.dropown {
     display: none;
   }
@@ -759,7 +760,9 @@ ul.social-footer2 li a {
         grid-template-columns: auto;
     -ms-grid-rows: 2fr 2fr 1fr;
         grid-template-rows: 2fr 2fr 1fr;
-        grid-template-areas: "header" "article" "footer";
+        grid-template-areas: "header"
+ "article"
+ "footer";
   }
   footer.footerClas {
     -ms-grid-row: 3;
