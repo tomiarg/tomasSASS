@@ -10,27 +10,28 @@ html{
         background-color: $colorTres;
         font-family: 'Mulish', sans-serif; 
         margin: 0 auto;
-        ul{
-            list-style: none;
-            
+    }
+}            
+ul{
+  list-style: none;           
+}
+a{
+  text-decoration: none;
+  color: black;
+    &:hover{
+        font-weight: bolder;
+        color: $colorSecundario;
         }
-        a{
-            text-decoration: none;
-            color: black;
-            &:hover{
-                font-weight: bolder;
-                color: $colorSecundario;
-            }
-        }
-    }  
-    header{
-        background-color: $colorPrimario; 
-        ul.redesLista{
-            display: flex;
-            font-family: 'Cairo', sans-serif;
-            font-weight: bolder;
-            font-size: large;    
-            justify-content: flex-end;   
+}
+ 
+header{
+    background-color: $colorPrimario; 
+    ul.redesLista{
+        display: flex;
+        font-family: 'Cairo', sans-serif;
+        font-weight: bolder;
+        font-size: large;    
+        justify-content: flex-end;   
             img{
                 width: 30px;
                 padding-right: 4px;
@@ -38,35 +39,29 @@ html{
 
             }   
         }
-        section.d-flex {
-            justify-content: space-between;
-            button{
-                width: 100px;
+    section.d-flex {
+      justify-content: space-between;
+        button{
+            width: 100px;
+            font-size: 22px;
+            background-color: $colorPrimario;
+            border-color: #ece7d6;
+            margin-left: 25px;
+        }
+        ul{
                 font-size: 22px;
-                background-color: $colorPrimario;
-                border-color: #ece7d6;
-                margin-left: 25px;
-            }
-            ul{
-                font-size: 22px;
-
-            }
-            section{
-                display:flex;
-                flex-direction: row;
-                font-size: 22px;
+        }
+        section{
+            display:flex;
+            flex-direction: row;
+            font-size: 22px;
                 a.ingreso{
                     margin-right: 10px;
                 }
 
             }
-        }
-        
-    }  
-
-}
-
-
+        }        
+    } 
 
 /*main*/
 #Main{
@@ -74,19 +69,14 @@ html{
     margin: 0 auto;  
     display: flex;
     justify-content: space-between;
-
     
 }
-
-
 section.mainLinks{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-      
-}    
-
+}   
 div.flexDiv{
     display:flex;
     flex-direction: row;
@@ -180,27 +170,34 @@ section.libros, section.productos{
 /*página Quienes Somos*/
 .bodyQuienes {
     background-color: $colorSecundario;
+
   }
   
-  .quienesSomos {
+  article.quienesSomos {
     width: 75%;
-    height: 400px;
+    height: 100vh;
     margin: 0 auto;
-    background-image: url(img/yaniymari.jpeg);
+    background-image: url(../img/yaniymari.jpeg);
+    background-size: cover;
     color: white;
+    display: flex;
     text-align: center;
+    flex-wrap: wrap;
+    align-content: space-around
+    article p {
+        width: 50%;
+        margin: 0 auto;
+      }
+    section.proposito{
+        text-align: center;
+
+    }
   }
-  
-  .proposito {
-    text-align: center;
-  }
-  
   .quienesTitulo {
     background-color: $colorSecundario;
     width: 50%;
-    height: 24px;
+    height: 33px;
     margin: 0 auto;
-    margin-top: 3px;
     font-size: 12px;
     border-bottom: dotted 2px $colorTres;
     color: black;
@@ -217,7 +214,7 @@ section.libros, section.productos{
   }
   
   .nombresQuienes {
-    color: $colorTres;
+    color: $colorPrimario;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -232,10 +229,7 @@ section.libros, section.productos{
             align-items: center;
   }
   
-  article p {
-    width: 50%;
-    margin: 0 auto;
-  }
+
   /*pestaña clases*/
 .bodyClases {
     background-color: #DC632C;
@@ -243,7 +237,7 @@ section.libros, section.productos{
   
   .clases {
     width: 75%;
-    height: 500px;
+    height: 100vh;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,43 +246,44 @@ section.libros, section.productos{
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+            section{
+                width: 50%;
+                font-size: 26px;
+                font-weight: bold;
+                &.mensuales{
+                    background-image: url(../img/lasalablanca.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: flex;
+                    align-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                &.talleres{
+                    background-image: url(../img/letournispadel.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+            }
   }
   
-  .mensuales {
-    width: 50%;
-    font-size: 26px;
-    font-weight: bold;
-    background-image: url(img/lasalablanca.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: flex-end;
-}
   
-.talleres {
-    width: 50%;
-    font-size: 26px;
-    font-weight: bold;
-    background-image: url(img/letournispadel.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
   /*contacto*/
 .bodyContacto {
     background-color: $colorPrimario;
   }
   
-  .contactoArt {
+article.contactoArt {
     width: 75%;
     height: 400px;
     margin: 0 auto;
-  }
+
+}
   
   .espacioInput {
     width: 60%;

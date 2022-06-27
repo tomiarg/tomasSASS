@@ -13,25 +13,25 @@ html body {
   margin: 0 auto;
 }
 
-html body ul {
+ul {
   list-style: none;
 }
 
-html body a {
+a {
   text-decoration: none;
   color: black;
 }
 
-html body a:hover {
+a:hover {
   font-weight: bolder;
   color: #A0B9F1;
 }
 
-html header {
+header {
   background-color: #fff9e6;
 }
 
-html header ul.redesLista {
+header ul.redesLista {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,19 +43,19 @@ html header ul.redesLista {
           justify-content: flex-end;
 }
 
-html header ul.redesLista img {
+header ul.redesLista img {
   width: 30px;
   padding-right: 4px;
   margin-right: 4px;
 }
 
-html header section.d-flex {
+header section.d-flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-html header section.d-flex button {
+header section.d-flex button {
   width: 100px;
   font-size: 22px;
   background-color: #fff9e6;
@@ -63,11 +63,11 @@ html header section.d-flex button {
   margin-left: 25px;
 }
 
-html header section.d-flex ul {
+header section.d-flex ul {
   font-size: 22px;
 }
 
-html header section.d-flex section {
+header section.d-flex section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,7 @@ html header section.d-flex section {
   font-size: 22px;
 }
 
-html header section.d-flex section a.ingreso {
+header section.d-flex section a.ingreso {
   margin-right: 10px;
 }
 
@@ -222,25 +222,34 @@ section.libros, section.productos {
   background-color: #A0B9F1;
 }
 
-.quienesSomos {
+article.quienesSomos {
   width: 75%;
-  height: 400px;
+  height: 100vh;
   margin: 0 auto;
-  background-image: url(img/yaniymari.jpeg);
+  background-image: url(../img/yaniymari.jpeg);
+  background-size: cover;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: space-around article p;
+      align-content: space-around article p;
+  align-content-width: 50%;
+  align-content-margin: 0 auto;
 }
 
-.proposito {
+article.quienesSomos section.proposito {
   text-align: center;
 }
 
 .quienesTitulo {
   background-color: #A0B9F1;
   width: 50%;
-  height: 24px;
+  height: 33px;
   margin: 0 auto;
-  margin-top: 3px;
   font-size: 12px;
   border-bottom: dotted 2px #B7AC72;
   color: black;
@@ -257,7 +266,7 @@ section.libros, section.productos {
 }
 
 .nombresQuienes {
-  color: #B7AC72;
+  color: #fff9e6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,11 +281,6 @@ section.libros, section.productos {
   align-items: center;
 }
 
-article p {
-  width: 50%;
-  margin: 0 auto;
-}
-
 /*pestaña clases*/
 .bodyClases {
   background-color: #DC632C;
@@ -284,7 +288,7 @@ article p {
 
 .clases {
   width: 75%;
-  height: 500px;
+  height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,11 +299,14 @@ article p {
   flex-direction: row;
 }
 
-.mensuales {
+.clases section {
   width: 50%;
   font-size: 26px;
   font-weight: bold;
-  background-image: url(img/lasalablanca.png);
+}
+
+.clases section.mensuales {
+  background-image: url(../img/lasalablanca.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -319,11 +326,8 @@ article p {
           justify-content: flex-end;
 }
 
-.talleres {
-  width: 50%;
-  font-size: 26px;
-  font-weight: bold;
-  background-image: url(img/letournispadel.png);
+.clases section.talleres {
+  background-image: url(../img/letournispadel.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -343,7 +347,7 @@ article p {
   background-color: #fff9e6;
 }
 
-.contactoArt {
+article.contactoArt {
   width: 75%;
   height: 400px;
   margin: 0 auto;
@@ -658,8 +662,7 @@ ul.social-footer2 li a {
         grid-template-columns: auto;
     -ms-grid-rows: 1fr 4fr;
         grid-template-rows: 1fr 4fr;
-        grid-template-areas: "header"
- "main";
+        grid-template-areas: "header" "main";
   }
   header {
     font-size: 20px;
@@ -688,7 +691,7 @@ ul.social-footer2 li a {
   }
   ul.redesLista {
     display: none;
-  } 
+  }
   button.dropown {
     display: none;
   }
@@ -760,9 +763,7 @@ ul.social-footer2 li a {
         grid-template-columns: auto;
     -ms-grid-rows: 2fr 2fr 1fr;
         grid-template-rows: 2fr 2fr 1fr;
-        grid-template-areas: "header"
- "article"
- "footer";
+        grid-template-areas: "header" "article" "footer";
   }
   footer.footerClas {
     -ms-grid-row: 3;
