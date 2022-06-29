@@ -13,6 +13,23 @@ html body {
   margin: 0 auto;
 }
 
+html body.bodyProductos {
+  background-color: #EAC867;
+  margin: 0 auto;
+}
+
+html body.bodyClases {
+  background-color: #DC632C;
+}
+
+html body.bodyQuienes {
+  background-color: #A0B9F1;
+}
+
+html body.bodyContacto {
+  background-color: #fff9e6;
+}
+
 ul {
   list-style: none;
 }
@@ -83,61 +100,47 @@ header section.d-flex section a.ingreso {
 }
 
 /*main*/
-#Main {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-section.mainLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-}
-
-div.flexDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-color: none;
-  --bs-card-border-width: 0;
-}
-
-.card-img-overlay h5 a {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  margin: -25px 0 0 -25px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-.divTitulo img {
+section.divTitulo img {
   width: 100%;
   height: 550px;
 }
 
-img.mainImg {
-  width: 100px;
+section.libros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+  height: 35%;
+  margin: 0 auto;
+}
+
+section.libros div img {
+  height: 50%;
+}
+
+section.libros div p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section.productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+  height: 35%;
+  margin: 0 auto;
+}
+
+section.productos p {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 main {
@@ -145,24 +148,14 @@ main {
   text-align: center;
 }
 
-h1 {
+main h1 {
   font-size: 72px;
   font-weight: bolder;
 }
 
-h4 {
+main h4 {
   font-weight: bold;
   color: black;
-}
-
-/*footers*/
-footer {
-  background-color: #616060;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-footer ul {
-  color: white;
 }
 
 /*agrego transition*/
@@ -178,11 +171,6 @@ h5.card-title a:hover {
 }
 
 /*página Productos*/
-.bodyProductos {
-  background-color: #EAC867;
-  margin: 0 auto;
-}
-
 div h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,32 +182,6 @@ div h2 {
 
 div.celulares {
   display: none;
-}
-
-section.libros, section.productos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 75%;
-  height: 35%;
-  margin: 0 auto;
-}
-
-.card-img-top {
-  height: 50%;
-}
-
-.card-text {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/*página Quienes Somos*/
-.bodyQuienes {
-  background-color: #A0B9F1;
 }
 
 article.quienesSomos {
@@ -245,17 +207,7 @@ article.quienesSomos section.proposito {
   text-align: center;
 }
 
-.quienesTitulo {
-  background-color: #A0B9F1;
-  width: 50%;
-  height: 33px;
-  margin: 0 auto;
-  font-size: 12px;
-  border-bottom: dotted 2px #B7AC72;
-  color: black;
-}
-
-.quienesProfes {
+article.quienesSomos section.quienesProfes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,7 +217,17 @@ article.quienesSomos section.proposito {
   flex-direction: row;
 }
 
-.nombresQuienes {
+article.quienesSomos div.quienesTitulo {
+  background-color: #A0B9F1;
+  width: 50%;
+  height: 33px;
+  margin: 0 auto;
+  font-size: 12px;
+  border-bottom: dotted 2px #B7AC72;
+  color: black;
+}
+
+article.quienesSomos div.nombresQuienes {
   color: #fff9e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,12 +243,7 @@ article.quienesSomos section.proposito {
   align-items: center;
 }
 
-/*pestaña clases*/
-.bodyClases {
-  background-color: #DC632C;
-}
-
-.clases {
+article.clases {
   width: 75%;
   height: 100vh;
   margin: 0 auto;
@@ -299,13 +256,13 @@ article.quienesSomos section.proposito {
   flex-direction: row;
 }
 
-.clases section {
+article.clases section {
   width: 50%;
   font-size: 26px;
   font-weight: bold;
 }
 
-.clases section.mensuales {
+article.clases section.mensuales {
   background-image: url(../img/lasalablanca.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -326,7 +283,7 @@ article.quienesSomos section.proposito {
           justify-content: flex-end;
 }
 
-.clases section.talleres {
+article.clases section.talleres {
   background-image: url(../img/letournispadel.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -342,30 +299,13 @@ article.quienesSomos section.proposito {
           align-items: flex-end;
 }
 
-/*contacto*/
-.bodyContacto {
-  background-color: #fff9e6;
-}
-
 article.contactoArt {
   width: 75%;
-  height: 400px;
+  height: 100vh;
   margin: 0 auto;
 }
 
-.espacioInput {
-  width: 60%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.consultaInput {
+article.contactoArt textarea, article.contactoArt input {
   width: 60%;
   height: 100px;
   margin: 0 auto;
@@ -374,7 +314,15 @@ article.contactoArt {
   display: flex;
 }
 
-.enviarInput {
+article.contactoArt input {
+  height: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+article.contactoArt input.enviarInput {
   width: 5%;
   margin: 0 auto;
   display: -webkit-box;
@@ -383,7 +331,7 @@ article.contactoArt {
   cursor: pointer;
 }
 
-.mailWhats {
+article.contactoArt section {
   width: 40%;
   margin: 0 auto;
   display: -webkit-box;

@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,800;1,400;1,600;1,700&display=swap');
 @import "colores";
+@mixin productos{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 35%;
+    margin: 0 auto;
+}
+@mixin cartas{
+    font-size: 20px;
+    font-weight: bold;
+}
 
 html{
     height: 100%;
@@ -10,7 +21,22 @@ html{
         background-color: $colorTres;
         font-family: 'Mulish', sans-serif; 
         margin: 0 auto;
+        &.bodyProductos{
+            background-color: #EAC867;
+            margin:0 auto;
+            } 
+        &.bodyClases {
+                background-color: #DC632C;
+         }
+        &.bodyQuienes {
+            background-color: $colorSecundario;        
+        }
+        &.bodyContacto {
+            background-color: $colorPrimario;
+        }
+
     }
+    
 }            
 ul{
   list-style: none;           
@@ -39,141 +65,97 @@ header{
 
             }   
         }
-    section.d-flex {
-      justify-content: space-between;
-        button{
-            width: 100px;
-            font-size: 22px;
-            background-color: $colorPrimario;
-            border-color: #ece7d6;
-            margin-left: 25px;
-        }
-        ul{
+    section{
+        &.d-flex {
+           justify-content: space-between;
+            button{
+                width: 100px;
                 font-size: 22px;
-        }
-        section{
-            display:flex;
-            flex-direction: row;
-            font-size: 22px;
-                a.ingreso{
-                    margin-right: 10px;
-                }
-
+                background-color: $colorPrimario;
+                border-color: #ece7d6;
+                margin-left: 25px;
             }
-        }        
+            ul{
+                font-size: 22px;
+            }
+            section{
+                display:flex;
+                flex-direction: row;
+                font-size: 22px;
+                  a.ingreso{
+                     margin-right: 10px;
+                }
+            }
+        }                
     } 
+}   
 
 /*main*/
-#Main{
-    width: 80%;
-    margin: 0 auto;  
-    display: flex;
-    justify-content: space-between;
-    
-}
-section.mainLinks{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-}   
-div.flexDiv{
-    display:flex;
-    flex-direction: row;
-    border-color: none;
-    --bs-card-border-width: 0;
-}
-.card-img-overlay h5 a{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    margin: -25px 0 0 -25px;
-    font-size: 20px;
-    font-weight: bolder;
-}
-.divTitulo img{
-   width: 100%;
-   height: 550px;
+section{
+    &.divTitulo img{
+        width: 100%;
+        height: 550px;
+    }
+    &.libros,{
+        @include productos;
+            div{
+               img{
+                 height: 50%;
+               }
+               p{
+                 @include cartas;
+               }
+             }
+        }
+    &.productos{
+         @include productos;
+         p{
+             @include cartas;
+         }
+    }
 }
 
-img.mainImg{
-    width: 100px;
-}
 main{
     font-weight: bolder;
     text-align: center;
-}
-h1{
-    
-    font-size: 72px;
-    font-weight: bolder;
-}
-
-
-h4{
-    font-weight: bold;
-    color: black;
-    
-}
-/*footers*/
-footer{
-    background-color: rgb(97, 96, 96);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    h1{
+        font-size: 72px;
+        font-weight: bolder; 
+    }
+    h4{
+        font-weight: bold;
+        color: black;
+        
+    }
 }
 
-footer ul{
-    color: white;
-}
 
 /*agrego transition*/
 h5.card-title a{
     transition: 2s;
-}
-  
-h5.card-title a:hover{
-    font-size: 28px;
-    font-weight: bolder;
-    color: $colorSecundario;
-}
-
-/*página Productos*/
-.bodyProductos{
-    background-color: #EAC867;
-    margin:0 auto; 
-
+    &:hover{
+        font-size: 28px;
+        font-weight: bolder;
+        color: $colorSecundario;
+    }
 }
 
-div h2{
-    display: flex;
-    justify-content: center;
-}
-div.celulares{
-    display: none;
-}
-section.libros, section.productos{
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    height: 35%;
-    margin: 0 auto;
+
+/*página Productos*/  
+
+div{
+    h2{
+      display: flex;
+       justify-content: center;
+    }
+    &.celulares{
+        display: none;
+    }
 }
 
-.card-img-top{
-    height: 50%;
-}
-.card-text{
-    font-size: 20px;
-    font-weight: bold;
-}
-/*página Quienes Somos*/
-.bodyQuienes {
-    background-color: $colorSecundario;
 
-  }
-  
-  article.quienesSomos {
+article{  
+  &.quienesSomos {
     width: 75%;
     height: 100vh;
     margin: 0 auto;
@@ -187,152 +169,137 @@ section.libros, section.productos{
     article p {
         width: 50%;
         margin: 0 auto;
-      }
-    section.proposito{
-        text-align: center;
-
     }
-  }
-  .quienesTitulo {
-    background-color: $colorSecundario;
-    width: 50%;
-    height: 33px;
-    margin: 0 auto;
-    font-size: 12px;
-    border-bottom: dotted 2px $colorTres;
-    color: black;
-  }
-  
-  .quienesProfes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
+    section{
+       &.proposito{
+        text-align: center;
+      }
+      &.quienesProfes {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+      }
+    }
+    div{
+        &.quienesTitulo {
+            background-color: $colorSecundario;
+            width: 50%;
+            height: 33px;
+            margin: 0 auto;
+            font-size: 12px;
+            border-bottom: dotted 2px $colorTres;
+            color: black;
+        }
+        &.nombresQuienes{
+            color: $colorPrimario;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
             flex-direction: row;
-  }
-  
-  .nombresQuienes {
-    color: $colorPrimario;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 10%;
-    margin: 0 auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+            width: 10%;
+            margin: 0 auto;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
-  }
-  
 
-  /*pestaña clases*/
-.bodyClases {
-    background-color: #DC632C;
-  }
-  
-  .clases {
-    width: 75%;
-    height: 100vh;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-            section{
-                width: 50%;
-                font-size: 26px;
-                font-weight: bold;
-                &.mensuales{
-                    background-image: url(../img/lasalablanca.png);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: flex;
-                    align-content: center;
-                    align-items: flex-start;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                }
-
-                &.talleres{
-                    background-image: url(../img/letournispadel.png);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
+        }
+     }
+   }
+   &.clases {
+       width: 75%;
+       height: 100vh;
+       margin: 0 auto;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+        flex-direction: row;
+        section{
+            width: 50%;
+            font-size: 26px;
+            font-weight: bold;
+            &.mensuales{
+                background-image: url(../img/lasalablanca.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                align-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: flex-end;
             }
-  }
-  
-  
-  /*contacto*/
-.bodyContacto {
-    background-color: $colorPrimario;
-  }
-  
-article.contactoArt {
-    width: 75%;
-    height: 400px;
-    margin: 0 auto;
+            &.talleres{
+                background-image: url(../img/letournispadel.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+    }
+    &.contactoArt {
+        width: 75%;
+        height: 100vh;
+        margin: 0 auto;
+        textarea{
+            width: 60%;
+            height: 100px;            
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
 
+        }
+        input{
+            @extend textarea;
+            height: 30px;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            &.enviarInput{
+                width: 5%;
+                margin: 0 auto;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                cursor: pointer;
+            }        
+
+        }
+        section{
+            width: 40%;
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+
+        }
+    
+    }
+    &.p-mobile{
+        display:none;
+    }
+      
 }
   
-  .espacioInput {
-    width: 60%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  
-  .consultaInput {
-    width: 60%;
-    height: 100px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .enviarInput {
-    width: 5%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    cursor: pointer;
-  }
-  
-  .mailWhats {
-    width: 40%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-article.p-mobile{
-    display:none;
-}
 button.mobileCanvas{
    display: none;
 }
