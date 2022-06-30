@@ -12,6 +12,26 @@
     font-weight: bold;
 }
 
+$marron: #EAC867;
+$rojo: #fd7317ee;
+$celeste: #1d9bf0;
+$amarillo: #eac867;
+$piel: #fff9e6;
+
+$colorPages:(
+    indice: $marron,
+    bodyClases: $rojo,
+    bodyQuienes: $celeste,
+    bodyProductos: $amarillo,
+    bodyContacto: $piel,
+);
+
+@each $page, $color in $colorPages{
+      .#{$page}{
+        background-color: $color;
+    }
+}
+
 html{
     height: 100%;
     background-color: $colorPrimario;
@@ -378,6 +398,7 @@ transition: all 250ms ease-in-out 0s;
 
 }
 
+
 @media screen and (max-width: 768px) {
     h1{
         color: white;
@@ -592,3 +613,5 @@ transition: all 250ms ease-in-out 0s;
 @media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1200px) {}
+
+
