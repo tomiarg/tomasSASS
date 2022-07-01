@@ -1,0 +1,7 @@
+aplico un mapa y un Bucle en SASS para darle Background a cada body de los diferentes htmls.
+
+aplico @mixin para mostrar los productos en la pag de productos.html, tanto los libros como los productos tienen el mismo diseño.
+
+aplico @extend para copiar el formato de los input en la page de contacto.html.
+
+

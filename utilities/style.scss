@@ -136,11 +136,18 @@ section{
 }
 
 main{
+    height: 100vh;
     font-weight: bolder;
     text-align: center;
+    background-image: url(../img/posibleMainimg.jpeg);
     h1{
+        width: 400px;
+        background-color: white;
+        padding: 12px;
         font-size: 72px;
         font-weight: bolder; 
+        mix-blend-mode: screen;
+        margin:0 auto;
     }
     h4{
         font-weight: bold;
