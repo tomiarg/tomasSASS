@@ -742,7 +742,7 @@ ul.social-footer2 li a {
     --bs-btn-focus-shadow-rgb: 255,249,230;
   }
   div.offcanvas {
-    --bs-offcanvas-width: 65%;
+    --bs-offcanvas-width: 375px;
   }
   h5.offcanvas-title {
     color: black;
@@ -806,6 +806,10 @@ ul.social-footer2 li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  section.imgIndex div img {
+    width: 200px;
+    height: 200px;
   }
   section.divTitulo {
     display: none;
