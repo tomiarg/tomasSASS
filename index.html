@@ -17,7 +17,10 @@
   
 
   <link rel="stylesheet" href="utilities/style.css">
-   
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/> 
 
 </head>
 
@@ -30,34 +33,43 @@
       <li><a href="https://www.twitter.com" target="_blank"><img src="./img/twitter.png" alt="twitter" class="redes"></a></span></li>
       <li><a href="https://www.twitter.com" target="_blank"><img src="img/facebook.png" alt="facebok" class="redes"></a></li>
     </ul> 
-   </div> 
-        <!--Bootstrap dropdown-->
-        <nav class="menuFijo" >
-        <section class="d-flex mb-3">
-          <div class="dropown">
-            <button class="dropown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-              Menú
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li><a href="index.html" class="dropdown-item" type="button">índice</a></li>
-              <li><a href="./pages/clases.html" class="dropdown-item" type="button">clases</a></li>
-              <li><a href="./pages/quienes.html" class="dropdown-item" type="button">quiénes somos</a></li>
-              <li><a href="./pages/productos.html" class="dropdown-item" type="button">produtos</a></li>
-              <li><a href="./pages/contacto.html"class="dropdown-item" type="button">contacto</a></li>
-            </ul>
-          </div>
-        
-         <section class="p-2">          
-          <div><a class="ingreso" href="XXXXXX">ingreso</a></div>
-          <div><a href="XXXXXX">registrarse</a></div>
-        </section>
-      </section>
-       </nav>
-   <button class="btn btn-primary mobileCanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="img/logoClemat2.jpeg" alt="logo"></button>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logoClemat2.jpeg" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" style="border-bottom: #eac867 5px solid;">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/quienes.html">Quiénes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/clases.html">Clases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+            </li>
 
-         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-         <div class="offcanvas-header">
-         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          </ul>
+          <section class="p-2">          
+            <div><a class="ingreso" href="XXXXXX">ingreso</a></div>
+            <div><a href="XXXXXX">registrarse</a></div>
+          </section>
+        </div>
+      </div>
+    </nav>
+ 
+  <button class="btn btn-primary mobileCanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><img src="img/logoClemat2.jpeg" alt="logo"></button>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
           <ul>
             <li><a href="index.html" class="dropdown-item" type="button">índice</a></li>
             <li><a href="./pages/clases.html" class="dropdown-item" type="button">clases</a></li>
@@ -101,26 +113,26 @@
       </ul> 
   </div>
  </div>
-     </header>
+</header>
      <main>
       <hr>
       <h1>Clemat</h1>
       <h4>Yoga en familia</h4>
-      <hr>
      </main>
-      <article class="p-mobile">
-        <h3>Yoga & mindfullness para niños</h3>
-        <h3>estimulación temprana</h3>
-        <h3>aprendizaje holístico</h3>
-        <h3>yoga en familia</h3>
+     
+    <article class="p-mobile">
+        <h3 class="animate__animated animate__backInDown">Yoga & mindfullness para niños</h3>
+        <h3 class="animate__animated animate__backInDown">aprendizaje holístico</h3>
+        <h3 class="animate__animated animate__backInDown">estimulación temprana</h3>
+        <h3 class="animate__animated animate__backInDown">yoga en familia</h3>
      </article>
+     <section class="imgIndex">      
+      <div><img src="./img/jugando.jpeg" alt="jugando"></div>
+      <div><img src="./img/sintiendo.jpeg" alt="sintiendo"></div>
+      <div><img src="./img/compartiendo.jpeg" alt="compartiendo"></div>
+     </section>
 
 
-
-     <!--<section class="divTitulo">
-      <img src="img/posibleMainimg.jpeg" alt="textura">
-  
-     </section> -->
 
 <!--FOOTER-->
      <footer id="footer" class="footer-1">

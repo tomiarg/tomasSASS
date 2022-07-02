@@ -1,0 +1,98 @@
+header{
+    font-size: 20px;
+    background-color: #fbf2e1;
+    nav{
+         background-color: #fbf2e1;
+        div{
+            align-items: flex-end;
+             a{
+                img{
+                    width: 50px;
+                }
+                                
+            }
+        }
+        section{
+            display: flex;
+            div{
+                a{
+                    &.ingreso{
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+    background-color: $colorPrimario; 
+    ul.redesLista{
+        background-color: #fbf2e1;
+        display: flex;
+        font-family: 'Cairo', sans-serif;
+        font-weight: bolder;
+        font-size: large;    
+        justify-content: flex-end; 
+        margin-bottom: 0px;  
+            img{
+                width: 30px;
+                padding-right: 4px;
+                margin-right: 4px;
+            }   
+        }
+    section{
+        &.d-flex {
+           justify-content: space-between;
+            button{
+                width: 100px;
+                font-size: 22px;
+                background-color: $colorPrimario;
+                border-color: #ece7d6;
+                margin-left: 25px;
+            }
+            ul{
+                font-size: 22px;
+            }
+            section{
+                display:flex;
+                flex-direction: row;
+                font-size: 22px;
+                  a.ingreso{
+                     margin-right: 10px;
+                }
+            }
+        }                
+    } 
+}   
+@media screen and (max-width: 768px){
+    hr {
+        color: white;
+        height: 5px;
+        background-color: white;
+        opacity: 1;
+      }
+      header{ 
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        nav{
+            &.navbar{
+             display: none;
+            }
+        }
+        button.mobileCanvas{
+            display: block;
+         }
+         ul.redesLista{
+            display: none;
+        }
+        
+    }
+    ul.redesListaCanvas{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
