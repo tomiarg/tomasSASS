@@ -28,3 +28,20 @@ main{
         width: 400px;        
     }
 }
+@media screen and (max-width: 768px) {
+    h4{     
+       display:none;
+    }
+    h1{
+        margin: 0 auto;
+    }
+    hr {
+        color: white;
+        height: 5px;
+        background-color: white;
+        opacity: 1;
+      }
+    main{
+        width: 100%;
+    }
+}    

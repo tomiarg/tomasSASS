@@ -139,20 +139,38 @@ div{
     &.celulares{
         display: none;
     }
+    &.somos{
+        height: 70vh;
+        background-image: url(../img/yaniymari.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        display: flex; 
+        align-items: center;     
+        h2{
+            width: 280px;
+            background-color: #fff9e6;
+            padding: 12px;
+            font-size: 72px;
+            font-weight: bolder; 
+            mix-blend-mode: screen;
+            margin:0 auto;
+
+        }
+    }
 }
 
 
 article{  
   &.quienesSomos {
     width: 75%;
-    height: 100vh;
+    height: 1200px;
     margin: 0 auto;
-    background-image: url(../img/yaniymari.jpeg);
     background-size: cover;
     color: white;
     display: flex;
+    flex-direction: column;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: space-around
     article p {
         width: 50%;
@@ -160,9 +178,30 @@ article{
     }
     section{
        &.proposito{
-        text-align: center;
-      }
-      &.quienesProfes {
+             margin-top: 65px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-content: stretch;
+            justify-content: space-between;
+            align-items: center;                   
+            div{
+                width: 400px;
+                &.quienesTitulo {
+                    height: 33px;
+                    margin: 0 auto;
+                    font-size: 12px;
+                    border-bottom: dotted 2px $colorTres;
+                    color: black;
+                    h2{
+                     font-weight: bolder;
+                    }
+                }
+                p{
+                font-weight: 900;
+                }
+            }
+        &.quienesProfes {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -172,16 +211,7 @@ article{
                 flex-direction: row;
       }
     }
-    div{
-        &.quienesTitulo {
-            background-color: $colorSecundario;
-            width: 50%;
-            height: 33px;
-            margin: 0 auto;
-            font-size: 12px;
-            border-bottom: dotted 2px $colorTres;
-            color: black;
-        }
+
         &.nombresQuienes{
             color: $colorPrimario;
             display: -webkit-box;
@@ -198,7 +228,25 @@ article{
             align-items: center;
 
         }
-     }
+    }
+    div{
+        img{
+            width: 700px;
+            height: 400px;
+        }
+        &.quienesTitulo {
+            margin-top: 45px;
+            height: 33px;
+            margin: 0 auto;
+            font-size: 12px;
+            border-bottom: dotted 2px $colorTres;
+            color: black;
+            h2{
+              font-weight: bolder;
+            }
+        }
+        
+    }
    }
    &.clases {
        width: 75%;
@@ -377,18 +425,6 @@ transition: all 250ms ease-in-out 0s;
 
 
 @media screen and (max-width: 768px) {
-    h4{     
-       display:none;
-    }
-    h1{
-        margin: 0 auto;
-    }
-    hr {
-        color: white;
-        height: 5px;
-        background-color: white;
-        opacity: 1;
-      }
     .btn-primary {    
     font-weight: bold;
      --bs-btn-color: #00000;
@@ -426,9 +462,6 @@ transition: all 250ms ease-in-out 0s;
         "main"
         ;
     }
-    main{
-        width: 100%;
-    }
 
     article{
         width: 100%;
@@ -446,6 +479,7 @@ transition: all 250ms ease-in-out 0s;
     }   
     section{
         &.imgIndex{
+            width: 100%;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -457,29 +491,6 @@ transition: all 250ms ease-in-out 0s;
            }
         }
     }    
- 
-
-    section.divTitulo{
-        display:none;
-    }
-
-
-    .card-img-overlay h5 a{
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        margin: -25px 0 0 -25px;
-        font-size: 20px;
-        font-weight: bolder;
-    }
-    
-
-  
-    span a img{
-        width:200px;
-    }
     .menuFijo{
         background-color: $colorTres;
     }
@@ -490,7 +501,6 @@ transition: all 250ms ease-in-out 0s;
         display: none;
     }
     
-
     /*responsive Clases*/
     body.bodyClases{
         width: 100%;
