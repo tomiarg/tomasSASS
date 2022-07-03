@@ -351,7 +351,7 @@ div.somos {
 }
 
 div.somos h2 {
-  width: 280px;
+  width: 40%;
   background-color: #fff9e6;
   padding: 12px;
   font-size: 72px;
@@ -449,8 +449,8 @@ article.quienesSomos section.nombresQuienes {
 }
 
 article.quienesSomos div img {
-  width: 700px;
-  height: 400px;
+  width: 75%;
+  height: 55%;
 }
 
 article.quienesSomos div.quienesTitulo {

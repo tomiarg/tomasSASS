@@ -134,7 +134,7 @@ h5.card-title a{
 div{
     h2{
       display: flex;
-       justify-content: center;
+      justify-content: center;
     }
     &.celulares{
         display: none;
@@ -147,7 +147,7 @@ div{
         display: flex; 
         align-items: center;     
         h2{
-            width: 280px;
+            width: 40%;
             background-color: #fff9e6;
             padding: 12px;
             font-size: 72px;
@@ -231,8 +231,8 @@ article{
     }
     div{
         img{
-            width: 700px;
-            height: 400px;
+            width: 75%;
+            height: 55%;
         }
         &.quienesTitulo {
             margin-top: 45px;
