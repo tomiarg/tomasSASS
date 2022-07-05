@@ -413,6 +413,12 @@ ul.social-footer2 li a {
   body {
     width: 100%;
   }
+  body.bodyQuienes {
+    height: 250vh;
+  }
+  body.bodyClases {
+    background-color: #fff9e6;
+  }
   article {
     width: 100%;
   }
@@ -457,7 +463,18 @@ ul.social-footer2 li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 400px;
+    margin-top: 300px;
+  }
+  article.quienesSomos section.quienesProfes div.card {
+    height: 410px;
+  }
+  article.quienesSomos section.quienesProfes div.card img {
+    height: 245px;
+  }
+  article.quienesSomos section.proposito div p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   article.Clases {
     -ms-grid-row: 2;
@@ -502,10 +519,6 @@ ul.social-footer2 li a {
     background-image: url(./img/rectanguloarticleMobile.png);
     background-size: cover;
   }
-  div.somos h2 {
-    width: 100%;
-    background-color: #fff9e6;
-  }
   div.offcanvas {
     --bs-offcanvas-width: 375px;
   }
@@ -527,10 +540,8 @@ ul.social-footer2 li a {
   div.h2 {
     display: none;
   }
-  .menuFijo {
-    background-color: #B7AC72;
-  }
-  .bodyClases {
+  div.somos h2 {
+    width: 100%;
     background-color: #fff9e6;
   }
   nav.menuFijoC {
@@ -743,7 +754,7 @@ div.somos {
 }
 
 div.somos h2 {
-  width: 40%;
+  width: 100%;
   background-color: #fff9e6;
   padding: 12px;
   font-size: 72px;
