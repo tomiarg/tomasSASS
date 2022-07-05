@@ -1,0 +1,179 @@
+@media screen and (max-width: 768px) {
+    .btn-primary {    
+    font-weight: bold;
+     --bs-btn-color: #00000;
+     --bs-btn-bg: #fff9e6;
+    --bs-btn-border-color: #fff9e6;
+    --bs-btn-hover-bg: #fff9e6;
+    --bs-btn-hover-border-color: #fff9e6;
+    --bs-btn-active-bg: #fff9e6;
+    --bs-btn-focus-shadow-rgb: 255,249,230;
+    }
+    h5.offcanvas-title{
+        color: black;
+        font-size: 40px;
+    }
+    .offcanvas-title li{
+        border-bottom: 3px solid black;
+
+    }
+    .offcanvas.offcanvas-start{
+        background-color: $colorSecundario;
+    }
+    button img{
+        width: 100px;
+    }
+    body{
+        width: 100%;
+            ;
+    }
+
+    article{
+        width: 100%;
+         &.p-mobile {            
+            display: flex;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            flex-direction: column;
+            align-content: center;
+            margin-top: 120px;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            align-items: center
+       }
+       &.quienesSomos{
+           height: 1600px;
+            div{
+                img{
+                    &.imgSomos{
+                        display: none;
+                    }
+                 }
+            } 
+            section{
+                &.quienesProfes{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 400px;
+                }
+            }
+       }
+        &.Clases{
+         grid-area: article;
+        }
+    }   
+    section{
+        &.imgIndex{
+            width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           div{
+            img{
+                width: 200px;
+                height: 200px;
+            }
+           }
+        }
+        &.productos {
+            margin-top: 15%;
+            display: flex;
+            justify-content: center;
+            height: 318px;
+        }
+        &.libros{
+            display: none;
+        }
+        &.talleres{
+            background-image: url(./img/rectanglearticle2Mobile.png);
+            background-size: cover;
+            
+        }
+        &.mensuales{
+            background-image: url(./img/rectanguloarticleMobile.png);
+            background-size: cover;
+        }
+    }    
+    div{
+        &.somos{
+            h2{
+               width: 100%;
+               background-color: #fff9e6;
+            }
+        }
+        &.offcanvas{
+            --bs-offcanvas-width: 375px;
+        }
+        &.imagenMobile{
+            grid-area: header;
+            display: block;
+            display: flex;
+            justify-content: center;
+        }
+        &.celulares{
+            display: inline;
+        }
+        &.h2{
+            display: none;
+        }
+ 
+    }
+    .menuFijo{
+        background-color: $colorTres;
+    }
+    .bodyClases{
+        background-color: $colorPrimario;
+    }
+    nav.menuFijoC{
+        display: none;
+    }
+    
+    /*responsive Clases*/
+    body.bodyClases{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: 
+        "header"
+        "article"
+        "footer"
+        ;
+    }
+
+    footer.footerClas{
+        grid-area: footer;
+        background-image: url(../piedepagMobileClases.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    footer.footerClas ul{
+        display: none;
+    }
+    footer.footerClas h6{
+        display: none;
+    }
+
+    .clases {
+        width: 100%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    section.mensuales, section.talleres{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {}
