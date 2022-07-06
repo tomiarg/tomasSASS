@@ -727,6 +727,11 @@ section.imgIndex div img:hover {
           transform: scale(1.2);
 }
 
+section.mailWhats div img {
+  width: 30px;
+  height: 30px;
+}
+
 div h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,7 +893,7 @@ article div.quienesTitulo h2 {
 }
 
 article.clases {
-  width: 75%;
+  width: 80%;
   height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
@@ -906,31 +911,12 @@ article.clases section {
   font-weight: bold;
 }
 
-article.clases section.mensuales {
-  background-image: url(../img/lasalablanca.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+article.clases section.mensuales img {
+  width: 100%;
+  height: 100vh;
 }
 
 article.clases section.talleres {
-  background-image: url(../img/letournispadel.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -938,9 +924,28 @@ article.clases section.talleres {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+article.clases section.talleres div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article.clases section.talleres div h3 {
+  background-color: #fff9e6;
+  padding: 12px;
+  font-weight: bolder;
+  mix-blend-mode: screen;
 }
 
 article.contactoArt {
