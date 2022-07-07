@@ -584,7 +584,8 @@ html body {
 }
 
 html body.bodyProductos {
-  background-color: #EAC867;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbf2e1), to(#EAC867));
+  background-image: linear-gradient(#fbf2e1, #EAC867);
   margin: 0 auto;
 }
 
@@ -633,12 +634,22 @@ section.libros {
 }
 
 section.libros div img {
-  height: 50%;
+  height: 198px;
 }
 
 section.libros div p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: regular;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.productos {
@@ -653,9 +664,23 @@ section.productos {
   margin: 0 auto;
 }
 
+section.productos div img {
+  height: 198px;
+}
+
 section.productos p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: regular;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.imgIndex {
