@@ -410,14 +410,11 @@ ul.social-footer2 li a {
   button img {
     width: 100px;
   }
-  body {
+  html body {
     width: 100%;
   }
-  body.bodyQuienes {
+  html body.bodyQuienes {
     height: 250vh;
-  }
-  body.bodyClases {
-    background-color: #fff9e6;
   }
   article {
     width: 100%;
@@ -476,10 +473,23 @@ ul.social-footer2 li a {
     display: -ms-flexbox;
     display: flex;
   }
-  article.Clases {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: article;
+  article.clases {
+    background-image: url(../img/clasesYoga.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  article.clases section.mensuales div img {
+    display: none;
   }
   section.imgIndex {
     width: 100%;
@@ -515,16 +525,10 @@ ul.social-footer2 li a {
     background-image: url(./img/rectanglearticle2Mobile.png);
     background-size: cover;
   }
-  section.mensuales {
-    background-image: url(./img/rectanguloarticleMobile.png);
-    background-size: cover;
-  }
   div.offcanvas {
     --bs-offcanvas-width: 375px;
   }
   div.imagenMobile {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: header;
     display: block;
     display: -webkit-box;
@@ -543,53 +547,6 @@ ul.social-footer2 li a {
   div.somos h2 {
     width: 100%;
     background-color: #fff9e6;
-  }
-  nav.menuFijoC {
-    display: none;
-  }
-  /*responsive Clases*/
-  body.bodyClases {
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: 2fr 2fr 1fr;
-        grid-template-rows: 2fr 2fr 1fr;
-        grid-template-areas: "header" "article" "footer";
-  }
-  footer.footerClas {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: footer;
-    background-image: url(../piedepagMobileClases.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  footer.footerClas ul {
-    display: none;
-  }
-  footer.footerClas h6 {
-    display: none;
-  }
-  .clases {
-    width: 100%;
-    height: 80%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-  }
-  section.mensuales, section.talleres {
-    width: 100%;
-    text-align: center;
   }
 }
 
@@ -632,7 +589,8 @@ html body.bodyProductos {
 }
 
 html body.bodyClases {
-  background-color: #DC632C;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbf2e1), to(#fd7317ee));
+  background-image: linear-gradient(#fbf2e1, #fd7317ee);
 }
 
 html body.bodyQuienes {

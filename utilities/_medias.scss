@@ -25,17 +25,15 @@
     button img{
         width: 100px;
     }
-    body{
-        width: 100%;
+    html{
+        body{
+           width: 100%;
             ;
             &.bodyQuienes{
                 height: 250vh;
             }
-            &.bodyClases{
-                background-color: $colorPrimario;
-            }
+        }
     }
-
     article{
         width: 100%;
          &.p-mobile {            
@@ -82,9 +80,23 @@
                     }
                 }
             }
-       }
-        &.Clases{
-         grid-area: article;
+        }
+        &.clases{
+            background-image: url(../img/clasesYoga.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center;
+            section{
+                &.mensuales{
+                    div{
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }   
     section{
@@ -94,11 +106,11 @@
            flex-direction: column;
            align-items: center;
            div{
-            img{
+             img{
                 width: 200px;
                 height: 200px;
+              }
             }
-           }
         }
         &.productos {
             margin-top: 15%;
@@ -114,13 +126,9 @@
             background-size: cover;
             
         }
-        &.mensuales{
-            background-image: url(./img/rectanguloarticleMobile.png);
-            background-size: cover;
-        }
+
     }    
     div{
-
         
         &.offcanvas{
             --bs-offcanvas-width: 375px;
@@ -145,50 +153,7 @@
         }
     }
 
-    nav.menuFijoC{
-        display: none;
-    }
     
-    /*responsive Clases*/
-    body.bodyClases{
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 2fr 2fr 1fr;
-        grid-template-areas: 
-        "header"
-        "article"
-        "footer"
-        ;
-    }
-
-    footer.footerClas{
-        grid-area: footer;
-        background-image: url(../piedepagMobileClases.JPG);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    footer.footerClas ul{
-        display: none;
-    }
-    footer.footerClas h6{
-        display: none;
-    }
-
-    .clases {
-        width: 100%;
-        height: 80%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-    }
-    section.mensuales, section.talleres{
-        width: 100%;
-        text-align: center;
-    }
-
 }
 
 @media screen and (min-width: 768px) {}
