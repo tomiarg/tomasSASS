@@ -4,6 +4,7 @@
 @import "header";
 @import "footer";
 @import "medias";
+
 @mixin productos{
     display: flex;
     justify-content: space-between;
