@@ -1,0 +1,103 @@
+.bodyClases {
+    background-image: linear-gradient(#fbf2e1,#fd7317ee);
+}
+.clases {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+     flex-direction: row;
+     section{
+         width: 50%;
+         font-size: 26px;
+         font-weight: bold;
+         &.mensuales{
+             img{
+                 width:100%;
+                 height: 100vh;
+             }
+         }
+         &.talleres{
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+             div{
+                 display:flex;
+                 flex-direction: column;
+                 align-items: center;
+                 h3{
+                     
+                     background-color: #fff9e6;
+                     padding: 12px;
+                     font-weight: bolder; 
+                     mix-blend-mode: screen;
+                 }
+             }
+         }
+     }
+ }
+
+ 
+@media screen and (max-widht: 280px) {
+
+    article{
+        &.clases{
+            width: 100% !important;
+            background-image: url(../img/clasesYoga.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            section{
+                &.mensuales{
+                    div{
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+    
+ @media screen and (max-width: 768px) {
+    .clases{
+        width: 100% !important;
+        background-image: url(../img/fondoClases.jpeg);
+        background-size: cover;
+        color: #dc632c;
+        background-repeat: no-repeat;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        section{
+            &.mensuales{
+                div{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .talleres{
+        div{
+            div{
+                h3{
+                    color: #dc632c;
+                }
+                a{
+                    color: #dc632c;
+                }
+            }
+        }
+    }
+
+}   

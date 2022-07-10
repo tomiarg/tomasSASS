@@ -1,28 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,800;1,400;1,600;1,700&display=swap');
 @import "colores";
 @import "main";
+@import "clases";
+@import "productos";
+@import "contacto";
+@import "quienes";
 @import "header";
 @import "footer";
 @import "medias";
 
-@mixin productos{
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    height: 35%;
-    margin: 0 auto;
-}
-@mixin cartas{
-    font-size: 14px;
-    font-weight: regular;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 $marron: #f7de9c;
 $rojo: #fd7317ee;
-$celeste: #1d9bf0;
+$celeste: #97b9bb;
 $amarillo: #eac867;
 $piel: #fff9e6;
 
@@ -49,23 +38,11 @@ html{
         background-color: $colorTres;
         font-family: 'Mulish', sans-serif; 
         margin: 0 auto;
-        &.bodyProductos{
-            background-image: linear-gradient(#fbf2e1, #EAC867);
-            margin:0 auto;
-            } 
-        &.bodyClases {
-                background-image: linear-gradient(#fbf2e1,#fd7317ee);
-         }
-        &.bodyQuienes {
-            background-color: $colorSecundario;        
-        }
-        &.bodyContacto {
-            background-color: $colorPrimario;
-        }
 
     }
     
-}            
+}
+
 ul{
   list-style: none;           
 }
@@ -75,65 +52,8 @@ a{
     &:hover{
         font-weight: bolder;
         color: $colorSecundario;
-        }
-}
- 
-
-section{
-    &.divTitulo img{
-        width: 100%;
-        height: 550px;
     }
-    &.libros{
-        @include productos;
-            div{
-               img{
-                 height: 198px;
-               }
-               p{
-                 @include cartas;
-               }
-             }
-        }
-    &.productos{
-         @include productos;
-         div{
-            img{
-                height: 198px;
-            }
-         }
-         p{
-             @include cartas;
-         }
-    }
-    &.imgIndex{
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: space-evenly;
-        div{
-            img{
-            width: 400px;
-            height: 400px; 
-            border-radius: 50%;
-            transition: 0.5s;
-            object-fit: cover;
-                &:hover{
-                  transform: scale(1.1);
-                }
-            }           
-        }
-    }
-    &.mailWhats{
-        div{
-            img{
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-}
+} 
 
 div{
     h2{
@@ -143,227 +63,17 @@ div{
     &.celulares{
         display: none;
     }
-    &.somos{
-        height: 70vh;
-        background-image: url(../img/yaniymari.jpeg);
-        background-size: cover;
-        background-repeat: no-repeat;  
-        display: flex; 
-        align-items: center;     
-        h2{
-            width: 100%;
-            background-color: #fff9e6;
-            padding: 12px;
-            font-size: 72px;
-            font-weight: bolder; 
-            mix-blend-mode: screen;
-            margin:0 auto;
 
-        }
-    }
 }
 
-
-article{  
-  &.quienesSomos {
-    width: 75%;
-    height: 1400px;
-    margin: 0 auto;
-    background-size: cover;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    flex-wrap: nowrap;
-    align-content: space-around
-    article p {
-        width: 50%;
-        margin: 0 auto;
-    }
-    section{
-       &.proposito{
-             margin-top: 65px;
-            display: flex;
-            text-align: center;
-            flex-direction: column;
-            align-content: stretch;
-            justify-content: space-between;
-            align-items: center;                   
-            div{
-                width: 400px;
-                &.quienesTitulo {
-                    height: 33px;
-                    margin: 0 auto;
-                    font-size: 12px;
-                    color: black;
-                    h2{
-                      font-weight: bolder;
-                    }
-                }
-                p{
-                font-weight: 900;
-                }
-            }
-
-    }
-      &.quienesProfes {
-          display: flex;
-          justify-content: space-evenly;
-          height: 500px;
-          div{
-              display: flex;
-              flex-direction: column;
-             &.card-body{
-                  h5{
-                  color: black;
-                }        
-                  p{
-                 color: grey;
-                }
-              }
-            }    
-        }     
-    }
-
-    &.nombresQuienes{
-            color: $colorPrimario;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            width: 10%;
-            margin: 0 auto;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-
-        }
-    }
+article{ 
     div{
         img{
             width: 40rem;
             height: 25rem;
-        }
-        &.quienesTitulo {
-            margin-top: 45px;
-            height: 33px;
-            margin: 0 auto;
-            font-size: 12px;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            color: black;
-            h2{
-              font-weight: bolder;
-            }
-        }
-        
-    }
-
-   &.clases {
-       width: 80%;
-       height: 100vh;
-       margin: 0 auto;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-orient: horizontal;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: row;
-        flex-direction: row;
-        section{
-            width: 50%;
-            font-size: 26px;
-            font-weight: bold;
-            &.mensuales{
-                img{
-                    width:100%;
-                    height: 100vh;
-                }
-            }
-            &.talleres{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                div{
-                    display:flex;
-                    flex-direction: column;
-                    align-items: center;
-                    h3{
-                        
-                        background-color: #fff9e6;
-                        padding: 12px;
-                        font-weight: bolder; 
-                        mix-blend-mode: screen;
-                    }
-                }
-            }
-        }
-    }
-    &.contactoArt {
-        width: 75%;
-        height: 100vh;
-        margin: 0 auto;
-        textarea{
-            width: 60%;
-            height: 100px;            
-            margin: 0 auto;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-
-        }
-        input{
-            @extend textarea;
-            height: 30px;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            &.enviarInput{
-                width: 5%;
-                margin: 0 auto;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                cursor: pointer;
-            }        
-
-        }
-        section{
-            width: 40%;
-            margin: 0 auto;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-
-        }
-    
-    }
-    &.p-mobile{
-        display: flex;
-        font-weight: bolder;
-        font-family: 'Mulish', sans-serif;
-        flex-direction: column;
-        align-content: center;
-        margin-top: 120px;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-    }
-      
-}
-  
+        }       
+    }      
+}  
 button.mobileCanvas{
    display: none;
 }
