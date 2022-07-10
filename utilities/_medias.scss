@@ -22,9 +22,9 @@
             }
         }
     }   
-    }
-    
 }
+    
+
 @media screen and (max-width: 768px) {
     .btn-primary {    
     font-weight: bold;
@@ -70,6 +70,7 @@
         }
         &.quienesSomos{
            height: 1600px;
+           width: 100%;
             div{
                 img{
                     &.imgSomos{
@@ -95,9 +96,12 @@
                 }
                 &.proposito{
                     div{
-                        display: flex;
+                        height: 235px;
+                        width: 100%;
                         p{
-                            width: 100px;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
                         }
                     }
                 }
@@ -105,8 +109,9 @@
         }
         &.clases{
             width: 100% !important;
-            background-image: url(../img/clasesYoga.jpeg);
+            background-image: url(../img/fondoClases.jpeg);
             background-size: cover;
+            color: #dc632c;
             background-repeat: no-repeat;
             display: flex !important;
             flex-direction: column !important;
@@ -144,11 +149,6 @@
         &.libros{
             display: none;
         }
-        &.talleres{
-            background-image: url(./img/rectanglearticle2Mobile.png);
-            background-size: cover;
-            
-        }
 
     }    
     div{
@@ -175,6 +175,18 @@
             } 
         }
     }
+    .talleres{
+        div{
+            div{
+                h3{
+                    color: #dc632c;
+                }
+                a{
+                    color: #dc632c;
+                }
+            }
+        }
+    }
 
     
 }
@@ -183,4 +195,20 @@
 
 @media screen and (min-width: 1024px) {}
 
-@media screen and (min-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+
+    section{
+        &.imgIndex{
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           div{
+             img{
+                 width: 200px;
+                 height: 200px;
+                }
+            }
+        }
+    }
+}    

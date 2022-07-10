@@ -48,7 +48,7 @@ header{
                 background-color: $colorPrimario;
                 border-color: #ece7d6;
                 margin-left: 25px;
-            }
+
             ul{
                 font-size: 22px;
             }
@@ -59,10 +59,12 @@ header{
                   a.ingreso{
                      margin-right: 10px;
                 }
-            }
-        }                
-    } 
-}   
+            }                
+
+         } 
+        } 
+   } 
+}         
 @media screen and (max-width: 768px){
     hr {
         color: white;
@@ -70,7 +72,7 @@ header{
         background-color: white;
         opacity: 1;
       }
-      header{ 
+    header{ 
         font-size: 20px;
         font-weight: bold;
         display: flex;
@@ -96,3 +98,5 @@ header{
     }
 
 }
+
+

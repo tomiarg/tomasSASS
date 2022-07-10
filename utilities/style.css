@@ -115,11 +115,11 @@ header section.d-flex button {
   margin-left: 25px;
 }
 
-header section.d-flex ul {
+header section.d-flex button ul {
   font-size: 22px;
 }
 
-header section.d-flex section {
+header section.d-flex button section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +130,7 @@ header section.d-flex section {
   font-size: 22px;
 }
 
-header section.d-flex section a.ingreso {
+header section.d-flex button section a.ingreso {
   margin-right: 10px;
 }
 
@@ -386,6 +386,28 @@ ul.social-footer2 li a {
   transition: all 250ms ease-in-out 0s;
 }
 
+@media screen and (max-widht: 280px) {
+  article.clases {
+    width: 100% !important;
+    background-image: url(../img/clasesYoga.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  article.clases section.mensuales div img {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .btn-primary {
     font-weight: bold;
@@ -440,6 +462,7 @@ ul.social-footer2 li a {
   }
   article.quienesSomos {
     height: 1600px;
+    width: 100%;
   }
   article.quienesSomos div img.imgSomos {
     display: none;
@@ -465,15 +488,22 @@ ul.social-footer2 li a {
   article.quienesSomos section.quienesProfes div.card img {
     height: 245px;
   }
+  article.quienesSomos section.proposito div {
+    height: 235px;
+    width: 100%;
+  }
   article.quienesSomos section.proposito div p {
+    height: 100%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   article.clases {
     width: 100% !important;
-    background-image: url(../img/clasesYoga.jpeg);
+    background-image: url(../img/fondoClases.jpeg);
     background-size: cover;
+    color: #dc632c;
     background-repeat: no-repeat;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -519,10 +549,6 @@ ul.social-footer2 li a {
   section.libros {
     display: none;
   }
-  section.talleres {
-    background-image: url(./img/rectanglearticle2Mobile.png);
-    background-size: cover;
-  }
   div.offcanvas {
     --bs-offcanvas-width: 375px;
   }
@@ -545,6 +571,32 @@ ul.social-footer2 li a {
   div.somos h2 {
     width: 100%;
     background-color: #fff9e6;
+  }
+  .talleres div div h3 {
+    color: #dc632c;
+  }
+  .talleres div div a {
+    color: #dc632c;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.imgIndex {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.imgIndex div img {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -704,8 +756,8 @@ section.imgIndex div img {
 }
 
 section.imgIndex div img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 section.mailWhats div img {
