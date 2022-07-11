@@ -5,6 +5,9 @@
     height: 35%;
     margin: 0 auto;
 }
+.productosMobile{
+    display: none;
+}
 @mixin cartas{
     font-size: 14px;
     font-weight: regular;
@@ -39,12 +42,12 @@
      }
 }
 
+
 @media screen and (max-width: 768px) {
     .productos {
-        margin-top: 15%;
-        display: flex;
-        justify-content: center;
-        height: 318px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
     }
     .libros{
         display: none;
@@ -52,5 +55,53 @@
     &.h2{
         display: none;
     }
+    .productoDesktop{
+        display: none;
+    }
+    .productosMobile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .bg-dark{
+        height: 150px;
+        width: 150px;
+    }
+
+    .productos{
+        div{
+           img{
+               height: 150px;
+               width: 150px;
+           }
+        }
+    }
+
+}
+@media screen and (max-width: 400px){
+    .bg-dark{
+        height: 100px;
+        width: 100px;
+    }
+    .card-title{
+        font-size: 10px;
+    }
+    .card-text:last-child{
+        font-size: 8px;
+    }
+    .card-img{
+        width: 100px;
+        height: 100px;
+    }
+    .productos{
+        div{
+           img{
+               height: 100px;
+               width: 100px;
+           }
+        }
+    }
+
 
 }
